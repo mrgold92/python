@@ -1,5 +1,4 @@
 # Tipos de datos
-
 numero = 10
 Numero = 20
 saludo = "Hola a todos !!"
@@ -30,3 +29,13 @@ print("Número: " + str(a))
 print(int(b))
 print(float(c))
 print(int(d))
+
+# Cadena de caracteres
+cadena = "Hola mundo"
+print(cadena)
+print(cadena[2])
+print(cadena[2:])
+print(cadena[:2])
+print(cadena[2:6])
+print(cadena[-2])
+print(len(cadena))
