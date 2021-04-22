@@ -31,7 +31,7 @@ print(float(c))
 print(int(d))
 
 # Cadena de caracteres
-cadena = "Hola mundo"
+cadena = "   hola mundo  "
 print(cadena)
 print(cadena[2])
 print(cadena[2:])
@@ -39,3 +39,11 @@ print(cadena[:2])
 print(cadena[2:6])
 print(cadena[-2])
 print(len(cadena))
+print(cadena.capitalize())
+print(cadena.upper())
+print(cadena.lower())
+print(cadena.strip())
+print(cadena.replace("hola", "adiós"))
+print(cadena.lstrip())
+print(cadena.rstrip())
+print(cadena.split())
