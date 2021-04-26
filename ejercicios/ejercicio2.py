@@ -1,5 +1,5 @@
 #--------------------------------------------------#
-# 1- Pregunta los kilómetros
+# 1. Pregunta los kilómetros
 # 2. Pregunta el tiempo en minutos.
 # 3. Calcula la velocidad km/h.
 # 4. Muestra por pantalla el mensaje correspondiente:
