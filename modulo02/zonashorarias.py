@@ -4,11 +4,11 @@ import pytz
 
 #----------------------------------------------------------------#
 # pytz.all_timezones devuelve todas las zonas horarias.
-# datetime.now(pytz.timezone('zona')) devuelve la fecha de la zona.
+# datetime.now(timezone('zona')) devuelve la fecha de la zona.
 #----------------------------------------------------------------#
 
 # print(pytz.all_timezones)
-print(datetime.now(pytz.timezone('Asia/Tokyo')))
-print(datetime.now(pytz.timezone('Europe/Madrid')))
-print(datetime.now(pytz.timezone('US/Alaska')))
-print(datetime.now(pytz.timezone('UTC')))
+print(datetime.now(timezone('Asia/Tokyo')))
+print(datetime.now(timezone('Europe/Madrid')))
+print(datetime.now(timezone('US/Alaska')))
+print(datetime.now(timezone('UTC')))
