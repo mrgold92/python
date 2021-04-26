@@ -7,6 +7,8 @@ import pytz
 # datetime.now(pytz.timezone('zona')) devuelve la fecha de la zona.
 #----------------------------------------------------------------#
 
-print(pytz.all_timezones)
+# print(pytz.all_timezones)
 print(datetime.now(pytz.timezone('Asia/Tokyo')))
 print(datetime.now(pytz.timezone('Europe/Madrid')))
+print(datetime.now(pytz.timezone('US/Alaska')))
+print(datetime.now(pytz.timezone('UTC')))
