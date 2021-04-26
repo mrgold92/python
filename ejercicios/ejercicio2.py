@@ -17,9 +17,9 @@ velocidad = ((metros/1000) / (minutos / 60))
 
 print('{:.2f}km/h'.format(velocidad))
 
-if(velocidad <= 30):
+if(velocidad > 75):
+    print("Velocidad alta.")
+elif(velocidad < 30 ):
     print("Velocidad moderada.")
-elif(velocidad > 30 and velocidad <= 75):
-    print("Velocidad media.")
 else:
-    print('Velocidad alta.')
+    print('Velocidad baja.')
