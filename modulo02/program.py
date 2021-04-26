@@ -1,4 +1,4 @@
-# Tipos de datos
+# Variables
 numero = 10
 Numero = 20
 saludo = "Hola a todos !!"
