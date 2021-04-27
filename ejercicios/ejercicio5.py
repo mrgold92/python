@@ -9,8 +9,7 @@ numero = random.randint(1, 20)
 correcto = False
 
 while(correcto == False):
-    num = int(input("Dime un número:"))
-    if(num == numero):
+    if(int(input("Dime un número:")) == numero):
         correcto = True
 
 print(f'Has adivinado el número: {numero}')
