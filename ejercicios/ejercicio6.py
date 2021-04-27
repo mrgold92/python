@@ -9,7 +9,7 @@ numeros = []
 
 while(len(numeros) != 10):
 
-    n = input(f"- Dime un número: ")
+    n = input("- Dime un número: ")
     if(n.isdigit()):
         numeros.append(int(n))
     else:
