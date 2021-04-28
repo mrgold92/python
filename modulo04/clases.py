@@ -72,6 +72,5 @@ class Alumno:
 
 alumno = Alumno("Pepito", "Pérez")
 alumno.saluda()
-print('--------------------')
 alumno.setfechaNacimiento("26-07-92")
 print(f"Edad: {alumno.getEdad()} años.")
