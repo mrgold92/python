@@ -24,3 +24,5 @@ print(dicc["red"])
 
 for k in dicc:
     print(k, '->', dicc[k])
+
+print(dicc.get("red"))
