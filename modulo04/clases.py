@@ -28,7 +28,6 @@ class Alumno:
     __fechaNacimiento = ""
     __edad = 0
 
-    # -> tipo de dato; es el tipo de dato que devuelve.
 
     def __init__(self, nombre, apellidos) -> None:
         self.__nombre = nombre
@@ -37,11 +36,17 @@ class Alumno:
     def saluda(self) -> None:
         print(f'Hola {self.__nombre} {self.__apellidos} !!!')
 
-    def setfechaNacimiento(self) -> None:
-        self.__fechaNacimiento = datetime.strptime(
-            input("Dime tu fecha de cumpleaños: "), '%d-%m-%Y').date()
-
-        self.__calcularEdad()
+    def setfechaNacimiento(self, fecha) -> None:
+        try:
+            if(len(fecha) == 8):
+                self.__fechaNacimiento = datetime.strptime(
+                    fecha, '%d-%m-%y').date()
+            else:
+                self.__fechaNacimiento = datetime.strptime(
+                    fecha, '%d-%m-%Y').date()
+            self.__calcularEdad()
+        except:
+            print("Formato incorrecto. [dd-mm-yyyy] || [dd-mm-yy] ")
 
     def __calcularEdad(self):
         self.__edad = datetime.now().date().year - self.__fechaNacimiento.year
@@ -61,10 +66,12 @@ class Alumno:
     def getNombre(self) -> str:
         return self.__nombre
 
+    def getApellidos(self) -> str:
+        return self.__apellidos
+
 
 alumno = Alumno("Pepito", "Pérez")
 alumno.saluda()
 print('--------------------')
-alumno.setfechaNacimiento()
-print(alumno.getFechaNacimiento())
-print(alumno.getEdad())
+alumno.setfechaNacimiento("26-07-92")
+print(f"Edad: {alumno.getEdad()} años.")
