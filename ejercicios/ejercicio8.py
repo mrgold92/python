@@ -27,7 +27,7 @@ fichero.close()
 
 
 while True:
-    identificador = int(input("Dime una identificador: "))
+    identificador = int(input("Dime un identificador: "))
 
     if identificador == -1:
         break
