@@ -24,7 +24,7 @@
 # w  -> Deja el cursor posicionado al principio.
 #-------------------------------------------------------#
 
-fichero = open("modulo5\\fichero.txt", "r", encoding="UTF-8")
+fichero = open("modulo05\\fichero.txt", "r", encoding="UTF-8")
 
 print(f"Fichero cerrado: {fichero.closed}")  # saber si el fichero está cerrado
 
