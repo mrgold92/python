@@ -1,3 +1,5 @@
+from datetime import datetime
+
 def generoMujeres(item):
     if(item.genero == 'Female'):
         return True
@@ -38,6 +40,7 @@ for i in fichero.readlines():
         cliente = Cliente(data[7].strip(), data[1], data[2])
         cliente.genero = data[3]
         cliente.edad = int(data[5])
+        cliente.fechaAlta = datetime.strptime(data[6], '%d/%m/%Y').date()
         cliente.pais = data[4]
         clientes.append(cliente)
 
@@ -77,4 +80,31 @@ while True:
     print(f'Hay { len(menoresveintiseis) } clientes menores de 26 en Francia.')
     print(f'Hay { len(hombreseeuu) } hombres de EEUU.')
     print(f'Hay { len(mujeresinglesas) } mujeres de Inglaterra mayores de 26.')
+
+    # Buscamos según parámetros indtroducidos
+    edad = int(input(f'Edad:'))
+    pais = input('Pais: ')
+    genero = input('Gener:')
+
+    busqueda = list(filter(lambda item: item.edad == edad and item.pais == pais and item.genero == genero, clientes))
+    print(f'Hay { len(busqueda) } clientes con esa búsqueda.')
+    
+    
+    # Volcado en archivo
+    # 32, United States, Female
+    archivo2 = open("modulo05\\resultado.txt", "wt")
+    lineas = []
+    lineas.append(f'Row,First Name,Last Name,Gender,Country,Age,Date\n')
+    archivo2.truncate()
+    contador = 0
+
+    for i in busqueda:
+        contador+=1
+        lineas.append(f"{contador},{i.nombre},{i.apellidos},{i.genero},{i.pais},{i.edad},{i.fechaAlta.strftime('%d/%m/%Y')}\n")
+        
+
+    archivo2.writelines(lineas)
+
+    archivo2.close()
+
     break
