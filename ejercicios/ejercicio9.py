@@ -31,7 +31,7 @@ clientes = json.loads(data)
 
 print(len(clientes))
 # Cod ANATR ANTON
-cod = input("Dime el código del cliente: ")
+cod = input("Dime el código del cliente: ").upper()
 cliente = list(filter(lambda c: c['CustomerID'] == cod, clientes))
 
 if len(cliente) == 0:
