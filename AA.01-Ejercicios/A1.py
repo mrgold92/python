@@ -13,6 +13,9 @@
 
 cadena = "Hola mundo !!"
 
+def saludo(nombre):
+    return f"{cadena}, ¿qué tal {nombre}?"
+
 nombre = input("Dime tu nombre: ")
 
-print(f"{cadena}, ¿qué tal {nombre}?")
+print(saludo(nombre))
