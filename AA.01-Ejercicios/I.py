@@ -46,3 +46,15 @@ if(len(colorelegido) > 1):
 
 
 print("Color con más vocales:", colorelegido[0])
+
+print("--------------")
+
+# Muestra la cantidad de colores que comienza y finaliza por vocal.
+c = 0
+vocales = "aeiouáéíóúü"
+
+for color in colores:
+    if color[0].lower() in vocales or color[len(color)-1] in vocales:
+        c += 1
+
+print("Cantidad de colores que empiezan o acaban por vocal: ", c)
