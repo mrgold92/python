@@ -32,5 +32,12 @@ while(c < 10):
     c += 1
     print(f"{math.pi:1.2f} x {c} = {(math.pi * c):1.2f}")
 
-# Del 20 al 10 multimplicado del 5 a 8, utilizando un FOR
-# Preguntar.
+print("--------------------")
+# Del 20 al 10 multimplicado del 5 a 8, utilizando un while
+c1, c2 = 20, 5
+while(c1 >= 10):
+    while(c2 <= 8):
+        print(f"{c1} x {c2} = {c1*c2}")
+        c2 += 1
+    c1 -= 1
+    c2 = 5

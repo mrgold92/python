@@ -58,4 +58,8 @@ for i in range(10, 21):
 print("-------------------")
 
 # Del 20 al 10 multimplicado del 5 a 8, utilizando dos FOR
-# Pedir confirmación
+
+for i in range(20, 9, -1):
+    for j in range(5, 9):
+        print(f"{i} x {j} = {i*j}")
+    print("")
