@@ -52,7 +52,10 @@ print("-------------------")
 
 # Del 10 al 20 sumado con el anterior
 for i in range(10, 21):
-    print(i + (i-1))
+    if(i==10):
+        print(10)
+    else:
+        print(i + (i-1))
 
 
 print("-------------------")
