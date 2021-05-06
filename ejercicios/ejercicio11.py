@@ -37,8 +37,9 @@ if(pedido != None):
         print(f"Detalles del pedido: {idPedido}")
 
         total = format(float(p['UnitPrice']) * int(p['Quantity']), '1.2f')
-
+        print("================================")
         print(f"{'Nombre':<35} {'cantidad':>6} {'precio':>8} {'total':>8}")
+        print("================================")
         print(f"{producto['ProductName']:<35}{p['Quantity']:>6} {p['UnitPrice']:>8} {total:>8}")
 
 
