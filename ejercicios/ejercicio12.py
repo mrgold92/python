@@ -44,7 +44,7 @@ print("===================================")
 #  - UnitPrice
 
 total = 0
-for p in products.find():
+for p in products.find({'UnitsInStock': {'$ne': '0'}}):
   total+= int(p['UnitsInStock']) * float(p['UnitPrice'])
 
 print(f"Total en stock: {total:1.2f}€")
