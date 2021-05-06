@@ -19,7 +19,7 @@ print("--------------------")
 
 # Números impares del 51 al 91
 c = 51
-while(c < 91):
+while(c <= 91):
     if(c % 2 != 0):
         print(c)
     c += 1
