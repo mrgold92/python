@@ -20,17 +20,17 @@ print("--------------------")
 # Números impares del 51 al 91
 c = 51
 while(c < 91):
-    c += 1
     if(c % 2 != 0):
         print(c)
+    c += 1
 
 print("--------------------")
 
 # Tabla de multiplicar de PI
 c = 0
-while(c < 10):
-    c += 1
+while(c <= 10):
     print(f"{math.pi:1.2f} x {c} = {(math.pi * c):1.2f}")
+    c += 1
 
 print("--------------------")
 # Del 20 al 10 multimplicado del 5 a 8, utilizando un while
