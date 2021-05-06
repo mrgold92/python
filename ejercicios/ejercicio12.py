@@ -45,9 +45,31 @@ print("===================================")
 
 total = 0
 for p in products.find({'UnitsInStock': {'$ne': '0'}}):
-  total+= int(p['UnitsInStock']) * float(p['UnitPrice'])
+    total += int(p['UnitsInStock']) * float(p['UnitPrice'])
 
 print(f"Total en stock: {total:1.2f}€")
 
 print("===================================")
 
+# Coste o valor de nuestro stock
+# utilizando la función aggregate
+
+query = [
+    {'$match': {'UnisInStock': {'$ne': 0}}},
+    {'$addFields': {
+        'Price': {'$toDouble': '$UnitPrice'},
+        'Stock': {'$toInt': '$UnitsInStock'},
+        }
+    },
+    { '$group': {
+        '_id' : 'Valor del Stock',
+        'Total': {'$sum': {'$multiply': ['$Price', '$Stock']}},
+        'Items': { '$sum': 1}
+        }
+    }
+]
+
+listProductos = products.aggregate(query)
+print(listProductos.next())
+
+print("===================================")
