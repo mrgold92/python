@@ -22,12 +22,11 @@ print("===============================================================")
 print(f"{'Nombre':<35} {'cantidad':>6} {'precio':>8} {'total':>8}")
 print("===============================================================")
 
-cursor.execute("SELECT *, UnitPrice * Quantity AS total FROM [Order Details] WHERE OrderID = %d", idPedido)
-
-detalle = cursor.fetchall()
+cursor.execute("SELECT ProductID, UnitPrice,Quantity,UnitPrice * Quantity AS total FROM [Order Details] WHERE OrderID = %d", idPedido)
 
 totalPedido = 0
-if(len(detalle) > 0):
+if(cursor.rowcount != 0):
+    detalle = cursor.fetchall()
     for p in detalle:
         cursor.execute("SELECT ProductName FROM products WHERE ProductID = %d", p['ProductID'])
         producto = cursor.fetchone()
