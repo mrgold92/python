@@ -39,4 +39,3 @@ if(cursor.rowcount != 0):
 
 else:
     print("No hay resultados.")
-© 2021 GitHub, Inc.
