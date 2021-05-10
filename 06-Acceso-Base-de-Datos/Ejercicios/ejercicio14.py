@@ -28,10 +28,12 @@ c.execute("""CREATE TABLE IF NOT EXISTS Customers
 cursor.execute('SELECT * FROM customers')
 
 for row in cursor.fetchall():
-    valores = (row['CustomerID'], row['CompanyName'], row['ContactName'], row[
-        'ContactTitle'], row['Address'], row['City'], row['Region'], row['PostalCode'], row['Country'], row['Phone'], row['Fax'])
-    c.execute(
-        'INSERT INTO Customers VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', valores)
+    valores = (row['CustomerID'], row['CompanyName'], row['ContactName'],
+               row['ContactTitle'], row['Address'], row['City'], row['Region'],
+               row['PostalCode'], row['Country'], row['Phone'], row['Fax'])
+
+    c.execute('INSERT INTO Customers VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', valores)
+    
     consqlite.commit()
 
 
