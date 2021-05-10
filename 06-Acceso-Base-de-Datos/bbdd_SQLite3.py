@@ -2,7 +2,7 @@ import sqlite3
 
 
 # Si no existe el fichero, lo crea
-con = sqlite3.connect("modulo06\\demo.db")
+con = sqlite3.connect("06-Acceso-Base-de-Datos\\demo.db")
 
 c = con.cursor()
 
