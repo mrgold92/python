@@ -7,16 +7,19 @@
 import sqlite3
 import pymssql
 
+# Conexiones SQLITE y SQLServer
 consqlite = sqlite3.connect("06-Acceso-Base-de-Datos\\Nortwind.db")
-
-c = consqlite.cursor()
 
 con = pymssql.connect(server='localhost', user='david',
                       password='root', database='northwind')
 
+# Cursores
+c = consqlite.cursor()
+
 cursor = con.cursor(as_dict=True)
 
 
+# Consultas
 c.execute("""CREATE TABLE IF NOT EXISTS Customers 
               (CustomerID, CompanyName, ContactName, ContactTitle, 
               Address, City, Region, PostalCode, Country, Phone, Fax)""")
@@ -32,20 +35,8 @@ for row in cursor.fetchall():
     consqlite.commit()
 
 
+# Cerramos conexiones y cursores
 c.close()
 cursor.close()
 consqlite.close()
 con.close()
-
-
-# cliente.CustomerID = "Demo 4"
-# cliente.CompanyName = "Uno dos Tres, S.L."
-# cliente.ContactName = "David Salazar"
-# cliente.ContactTitle = "Gerente"
-# cliente.Address = "Calle Gran vía 72"
-# cliente.City = "Madrid"
-# cliente.Region = "Madrid"
-# cliente.PostalCode = "28009"
-# cliente.Country = "Spain"
-# cliente.Phone = "(+34) 91 234 56 78"
-# cliente.Fax = "(+34) 91 234 56 78"
