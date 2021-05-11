@@ -31,4 +31,4 @@ if r.status_code == 200:
         print('No existe ese identificador.')
 else:
     print(
-        f'Error -> {r.status_code} / {r.reason}.')
+        f'Error -> {r.status_code} / {r.reason}')
