@@ -51,4 +51,4 @@ print("--------------")
 
 # Muestra la cantidad de colores que comienza y finaliza por vocal.
 vocales = "aeiouáéíóúü"
-print(f"Cantidad de colores que empiezan o acaban por vocal: {len(list(filter(lambda x : x[0].lower() in vocales or x[len(x)-1] in vocales, colores)))}")
+print(f"Cantidad de colores que empiezan o acaban por vocal: {len(list(filter(lambda x : x[0].lower() in vocales or x[len(x)-1].lower() in vocales, colores)))}")
